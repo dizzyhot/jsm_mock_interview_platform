@@ -2,7 +2,36 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+This project uses Firebase for authentication and database. You need to set up Firebase authentication.
+
+### Firebase Setup
+
+1. **For Local Development (Recommended)**:
+
+   ```bash
+   # Install Google Cloud CLI
+   # Then authenticate with your Firebase project
+   gcloud auth application-default login
+   ```
+
+2. **For Production/Alternative Setup**:
+   Create a `.env.local` file in the root directory with your Firebase service account credentials:
+
+   ```
+   FIREBASE_PROJECT_ID=your-project-id
+   FIREBASE_CLIENT_EMAIL=your-service-account-email
+   FIREBASE_PRIVATE_KEY="your-private-key"
+   ```
+
+   To get these credentials:
+
+   1. Go to Firebase Console → Project Settings → Service Accounts
+   2. Click "Generate new private key"
+   3. Download the JSON file and extract the values
+
+### Running the Development Server
 
 ```bash
 npm run dev
